@@ -18,13 +18,13 @@ export default function Blog() {
           ></Image>
         </a>
 
-        <a className="pt-[56px] text-[28px] sm:text-[36px] font-mono font-bold sm:text-center text-left">
+        <a className="dark:text-black pt-[56px] text-[28px] sm:text-[36px] font-mono font-bold sm:text-center text-left">
           {t3("title")}
         </a>
         <PostsInfo date={t3("date")} author={t3("author")}></PostsInfo>
-        <a className="pt-[24px]"> {t3("content")}</a>
-        <a className="pt-[24px]"> {t3("content-2")}</a>
-        <a className="pt-[24px]"> {t3("content-3")}</a>
+        <a className="dark:text-black pt-[24px]"> {t3("content")}</a>
+        <a className="dark:text-black pt-[24px]"> {t3("content-2")}</a>
+        <a className="dark:text-black pt-[24px]"> {t3("content-3")}</a>
 
         <div className="bg-black w-full h-[1px] mt-[32px] mb-[12px]" />
         <div className="flex flex-row justify-end"></div>
