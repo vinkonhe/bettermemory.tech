@@ -71,13 +71,13 @@ export default function Home() {
 
           <a
             href={`/${params.locale}/blog`}
-            className="m-2 opacity-85 hover:opacity-100 font-normal underline hover:decoration-2"
+            className="m-2 opacity-85 hover:opacity-100 font-normal underline hover:decoration-2 dark:text-black"
           >
             {t2("BlogText")}
           </a>
 
           <a
-            className="m-2 cursor-pointer opacity-85 hover:opacity-100 font-normal underline hover:decoration-2"
+            className="m-2 cursor-pointer opacity-85 hover:opacity-100 font-normal underline hover:decoration-2 dark:text-black"
             onClick={() => setIsLangModalOpen(true)}
           >
             {t2("ModalTitle")}
