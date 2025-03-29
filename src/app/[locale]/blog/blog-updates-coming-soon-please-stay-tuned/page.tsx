@@ -18,7 +18,7 @@ export default function Blog() {
           ></Image>
         </a>
 
-        <a className="pt-[56px] text-[28px] sm:text-[36px] font-bold sm:text-center text-left">
+        <a className="pt-[56px] text-[28px] sm:text-[36px] font-bold sm:text-center dark:text-black text-left">
           {t3("title")}
         </a>
         {/* <a className="pt-[24px] sm:text-center text-left">
@@ -27,7 +27,10 @@ export default function Blog() {
 
         <PostsInfo date={t3("date")} author={t3("author")}></PostsInfo>
 
-        <a className="pt-[24px] font-medium"> {t3("content")}</a>
+        <a className="pt-[24px] font-medium dark:text-black">
+          {" "}
+          {t3("content")}
+        </a>
 
         <div className="bg-black w-full h-[1px] mt-[32px] mb-[12px]" />
         <div className="flex flex-row justify-end"></div>
