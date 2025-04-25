@@ -6,15 +6,17 @@ import { useState } from "react";
 import Modal from "../Components/Modal";
 import { useRouter, useParams } from "next/navigation";
 import { Waitlist } from "../Components/Waitlist";
-import Alert from "../Components/Alert";
+// import Alert from "../Components/Alert";
+// import Lottie from "@lottielab/lottie-player/react";
 // import Card from "../Components/Card";
+import RiveC from "../Components/RiveC";
+import Accordion from "../Components/Accordion";
 
 export default function Home() {
   const router = useRouter();
   const params = useParams(); // 添加這行
   const t = useTranslations("HomePage");
   const t2 = useTranslations("Modal");
-  const [isTextModalOpen, setIsTextModalOpen] = useState(false);
   const [isLangModalOpen, setIsLangModalOpen] = useState(false);
 
   const languages = [
@@ -47,16 +49,30 @@ export default function Home() {
             height={26}
           ></Image>
         </a>
+
+        <RiveC></RiveC>
+
+        {/* <Lottie
+          src="https://cdn.lottielab.com/l/86iRZ8JBgn7Wyz.json"
+          autoplay
+        /> */}
         {/* <Alert content="hello" date="" to=""></Alert> */}
         {/* <Card></Card> */}
-        <a className="cursor-default pt-[32px] text-[16px] font-normal text-[#1E1E1D]">
+        <a className="cursor-default pt-[32px] text-[16px] font-normal text-[#44403C]">
           <span className="font-semibold">{t("title")}</span>
           {t("about")}
         </a>
 
-        <a className="cursor-default pt-[12px] text-[16px] font-normal text-[#1E1E1D]">
+        <a className="cursor-default pt-[12px] text-[16px] font-normal text-[#44403C]">
           {t("about-2")}
         </a>
+        {/*
+        <Accordion title="我們是一家怎樣的公司？">
+          <a className="cursor-default pt-[20px] text-[16px] font-normal text-[#1E1E1D]">
+            <span className="font-semibold">{t("title")}</span>
+            {t("about")}
+          </a>
+        </Accordion> */}
 
         <Waitlist></Waitlist>
 
