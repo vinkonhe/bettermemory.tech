@@ -9,8 +9,6 @@ import { Waitlist } from "../Components/Waitlist";
 // import Alert from "../Components/Alert";
 // import Lottie from "@lottielab/lottie-player/react";
 // import Card from "../Components/Card";
-import RiveC from "../Components/RiveC";
-import Accordion from "../Components/Accordion";
 
 export default function Home() {
   const router = useRouter();
@@ -49,9 +47,6 @@ export default function Home() {
             height={26}
           ></Image>
         </a>
-
-        <RiveC></RiveC>
-
         {/* <Lottie
           src="https://cdn.lottielab.com/l/86iRZ8JBgn7Wyz.json"
           autoplay
