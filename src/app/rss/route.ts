@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { baseUrl } from "../sitemap";
 import { getBlogPosts } from "../blog/utils";
 

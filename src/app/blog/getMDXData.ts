@@ -1,8 +1,8 @@
-import fs from "fs";
+/* eslint-disable prefer-const */
 import path from "path";
 import { getMDXFiles, readMDXFile } from "./utils";
 
-export function getMDXData(dir: fs) {
+export function getMDXData(dir: string) {
     let mdxFiles = getMDXFiles(dir);
     return mdxFiles.map((file) => {
         let { metadata, content } = readMDXFile(path.join(dir, file));

@@ -4,28 +4,30 @@ import { formatDate, getBlogPosts } from "../utils";
 import { baseUrl } from "../../sitemap";
 
 export async function generateStaticParams() {
-    let posts = getBlogPosts();
+    const posts = getBlogPosts(); // 使用 const 替代 let
 
     return posts.map((post) => ({
         slug: post.slug,
     }));
 }
 
-export function generateMetadata({ params }) {
-    let post = getBlogPosts().find((post) => post.slug === params.slug);
+// 修复 generateMetadata 为异步函数，并使用 const
+export async function generateMetadata({ params }) {
+    const { slug } = await params; // 使用 await 解析 params
+    const post = getBlogPosts().find((post) => post.slug === slug); // 使用 const 替代 let
     if (!post) {
         return;
     }
 
-    let {
+    const {
         title,
         publishedAt: publishedTime,
         summary: description,
         image,
-    } = post.metadata;
-    let ogImage = image
+    } = post.metadata; // 使用 const 替代 let
+    const ogImage = image
         ? image
-        : `${baseUrl}/og?title=${encodeURIComponent(title)}`;
+        : `${baseUrl}/og?title=${encodeURIComponent(title)}`; // 使用 const 替代 let
 
     return {
         title,
@@ -51,8 +53,10 @@ export function generateMetadata({ params }) {
     };
 }
 
-export default function Blog({ params }) {
-    let post = getBlogPosts().find((post) => post.slug === params.slug);
+// 修复 Blog 组件为异步函数，并使用 const
+export default async function Blog({ params }) {
+    const { slug } = await params; // 使用 await 解析 params
+    const post = getBlogPosts().find((post) => post.slug === slug); // 使用 const 替代 let
 
     if (!post) {
         notFound();
@@ -93,15 +97,8 @@ export default function Blog({ params }) {
                     <div>{post.metadata.author}</div>
                 </div>
             </div>
-            {/* <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-                <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                    {formatDate(post.metadata.publishedAt)}
-                </p>
-            </div> */}
-
             <article className="prose">
                 <CustomMDX source={post.content} />
-                {/* <CustomMDX source={post.metadata.summary} /> */}
             </article>
         </section>
     );

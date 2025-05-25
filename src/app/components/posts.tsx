@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import Link from "next/link";
 import { formatDate, getBlogPosts } from "../blog/utils";
 

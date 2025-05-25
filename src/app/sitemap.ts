@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 import { getBlogPosts } from "./blog/utils";
 
 export const baseUrl = "https://bettermemory.tech";
