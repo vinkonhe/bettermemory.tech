@@ -25,18 +25,8 @@ export async function GET(request: Request) {
 
     return new ImageResponse(
         (
-            <div
-                style={{
-                    backgroundColor: "white",
-                    height: "100%",
-                    width: "100%",
-                    fontSize: 100,
-                    fontFamily: "JetBrainsMono",
-                    paddingTop: "100px",
-                    paddingLeft: "50px",
-                }}
-            >
-                {title}
+            <div tw="flex items-end justify-left w-full h-full bg-[#F5F4EF] dark:bg-[#F5F4EF] pb-[56px]">
+                <a tw="text-4xl">{title}</a>
             </div>
         ),
         {
