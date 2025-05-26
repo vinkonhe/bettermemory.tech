@@ -19,8 +19,9 @@ async function loadGoogleFont(font: string, text: string) {
     throw new Error("failed to load font data");
 }
 
-export async function GET() {
-    const text = "Hello world!";
+export async function GET(request: Request) {
+    const url = new URL(request.url);
+    const title = url.searchParams.get("title") || "BETTERMEMORY EdTech";
 
     return new ImageResponse(
         (
@@ -30,12 +31,12 @@ export async function GET() {
                     height: "100%",
                     width: "100%",
                     fontSize: 100,
-                    fontFamily: "Geist",
+                    fontFamily: "JetBrainsMono",
                     paddingTop: "100px",
                     paddingLeft: "50px",
                 }}
             >
-                {text}
+                {title}
             </div>
         ),
         {
@@ -43,8 +44,8 @@ export async function GET() {
             height: 630,
             fonts: [
                 {
-                    name: "Geist",
-                    data: await loadGoogleFont("JetBrains+Mono", "text"),
+                    name: "JetBrainsMono",
+                    data: await loadGoogleFont("JetBrains+Mono", title),
                     style: "normal",
                 },
             ],
