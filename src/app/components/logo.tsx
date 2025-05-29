@@ -5,7 +5,7 @@ export default function Logo() {
         <div className="flex flex-col items-center pt-[24px]">
             <a className="items-center" href={"/"} target="_parent">
                 <Image
-                    src={"/bettermemory_v.svg"}
+                    src={"/BETTERMEMORY_LOGO_V.svg"}
                     alt={"logo"}
                     width={217}
                     height={20}
