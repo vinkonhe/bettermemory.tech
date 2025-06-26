@@ -1,10 +1,10 @@
-import Input from "./components/input";
+// import Input from "./components/input";
 
 export default function Page() {
     return (
         <section>
-            <div className="flex flex-col pt-[16px] bg-[#F5F4EF]">
-                <a className="cursor-default pt-[32px] text-[16px] font-semibold text-[#0C0A09] selection:bg-black selection:text-[#FFFFFF]">
+            <div className="flex flex-col pt-[32px] bg-[#F5F4EF]">
+                <a className="cursor-default pt-[16px] text-[16px] font-semibold text-[#0C0A09] selection:bg-black selection:text-[#FFFFFF]">
                     Introduction & Mission
                 </a>
                 <a className="cursor-default pt-[8px] text-[16px] font-normal text-[#44403C] selection:bg-black selection:text-[#FFFFFF]">
@@ -25,7 +25,7 @@ export default function Page() {
                     schools to innovate education and welcomes investments from
                     individuals or institutions.
                 </a>
-                <Input></Input>
+                {/* <Input></Input> */}
 
                 {/* <div className="my-8">
                     <BlogPosts />
