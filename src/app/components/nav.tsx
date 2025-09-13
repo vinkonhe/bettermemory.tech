@@ -20,7 +20,7 @@ export function Navbar() {
                                 <Link
                                     key={path}
                                     href={path}
-                                    className="ml-[20px] cursor-pointer opacity-85 hover:opacity-100 font-normal underline text-[18px]  hover:decoration-2 dark:text-black"
+                                    className="ml-[20px] italic  cursor-pointer opacity-85 hover:opacity-100 font-normal underline text-[16px]  hover:decoration-2 dark:text-black"
                                 >
                                     {name}
                                 </Link>
