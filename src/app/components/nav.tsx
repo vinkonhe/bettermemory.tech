@@ -11,7 +11,7 @@ const navItems = {
 
 export function Navbar() {
     return (
-        <aside className="items-end justify-end selection:bg-black selection:text-[#FFFFFF]">
+        <aside className="items-end justify-end selection:bg-black selection:text-[#FFFFFF] pt-[32px]">
             <div className="">
                 <nav className="flex flex-row justify-end mb-[56px]" id="nav">
                     <div className="flex flex-row space-x-0">

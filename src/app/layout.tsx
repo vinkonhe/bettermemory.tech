@@ -58,7 +58,7 @@ export default function RootLayout({
                 <main className="flex flex-col h-full selection:bg-black selection:text-white bg-[#F5F4EF] pt-[48px] justify-center">
                     <Logo />
                     {children}
-                    <div className="bg-black my-[16px] h-[1px]"></div>
+                    {/*<div className="bg-black my-[16px] h-[1px]"></div>*/}
                     <Navbar />
                     {/* <Footer /> */}
                     <Analytics />
