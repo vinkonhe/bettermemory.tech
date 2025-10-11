@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Logo() {
     return (
         <div className="flex flex-col items-center pt-[32px]">
-            <a href="/" target="_parent" className="block">
+            <Link href="/" target="_parent" className="block">
                 <div className="w-[180px] sm:w-[230px]">
                     <Image
                         src="/bettermemory_v.svg"
