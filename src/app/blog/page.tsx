@@ -10,7 +10,7 @@ export default function Page() {
         <section>
             <div className="flex flex-col">
                 {" "}
-                <a className="cursor-default pt-[32px] text-[16px] font-normal text-[#1E1E1D] ">
+                <a className="cursor-default pt-[48px] sm:text-[16px] text-[14px] font-normal text-[#1E1E1D] ">
                     All research and articles published by BETTERMEMORY.
                 </a>
                 <BlogPosts />
