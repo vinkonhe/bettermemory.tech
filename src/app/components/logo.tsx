@@ -14,7 +14,7 @@ export default function Logo() {
                         className="w-full h-auto"
                     />
                 </div>
-            </a>
+            </Link>
         </div>
     );
 }
